@@ -1,0 +1,11 @@
+v1
+{"path":"file:///app/data/tickets_enrichis/part-00000-8b5742e8-3b5e-4ff7-9184-a93660efb44d-c000.snappy.parquet","size":2914,"isDir":false,"modificationTime":1787250738689,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///app/data/tickets_enrichis/part-00000-56c79aeb-b62f-4dc7-9bda-90128b988213-c000.snappy.parquet","size":5484,"isDir":false,"modificationTime":1787250744397,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///app/data/tickets_enrichis/part-00000-8f83c43d-e282-4096-9d24-ed857e19b686-c000.snappy.parquet","size":3469,"isDir":false,"modificationTime":1787250749325,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///app/data/tickets_enrichis/part-00000-a1d77b1f-d4ca-4a1a-8604-80e62ff4e418-c000.snappy.parquet","size":3960,"isDir":false,"modificationTime":1787250762677,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///app/data/tickets_enrichis/part-00000-7b900293-2a88-4bab-8e7e-fc7c8ea9db96-c000.snappy.parquet","size":4588,"isDir":false,"modificationTime":1787250782606,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///app/data/tickets_enrichis/part-00000-aa0e633c-2818-4970-90cf-67787267cf0d-c000.snappy.parquet","size":4618,"isDir":false,"modificationTime":1787250802726,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///app/data/tickets_enrichis/part-00000-05e3339e-29fa-44c2-adce-01860f3a48ca-c000.snappy.parquet","size":4645,"isDir":false,"modificationTime":1787250822795,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///app/data/tickets_enrichis/part-00000-617347c7-22a0-44a2-a711-2b7ed68f96de-c000.snappy.parquet","size":4426,"isDir":false,"modificationTime":1787250842819,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///app/data/tickets_enrichis/part-00000-ed5cb0c7-b353-4b90-a39a-d0a4239931f4-c000.snappy.parquet","size":4539,"isDir":false,"modificationTime":1787250862828,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///app/data/tickets_enrichis/part-00000-a668ccd8-afbb-4c5e-b4e3-e4bf804e3608-c000.snappy.parquet","size":4659,"isDir":false,"modificationTime":1787250882604,"blockReplication":1,"blockSize":33554432,"action":"add"}

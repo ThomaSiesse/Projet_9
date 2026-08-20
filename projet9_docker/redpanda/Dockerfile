@@ -1,0 +1,1 @@
+FROM redpandadata/redpanda:v25.2.1

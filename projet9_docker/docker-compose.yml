@@ -1,0 +1,67 @@
+services:
+
+  redpanda:
+    build: ./redpanda
+    container_name: redpanda
+    ports:
+      - "9092:9092"
+      - "8081:8081"
+      - "9644:9644"
+    command:
+      - redpanda
+      - start
+      - --smp=1
+      - --memory=1G
+      - --overprovisioned
+      - --node-id=0
+      - --kafka-addr=PLAINTEXT://0.0.0.0:9092
+      - --advertise-kafka-addr=PLAINTEXT://redpanda:9092
+    volumes:
+      - redpanda-data:/var/lib/redpanda/data
+    healthcheck:
+      test: ["CMD", "rpk", "cluster", "info", "-X", "brokers=localhost:9092"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    networks:
+      - tickets-net
+
+  ticket-generator:
+    build: ./generator
+    container_name: ticket-generator
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    environment:
+      REDPANDA_BROKERS: "redpanda:9092"
+    command: ["--brokers", "redpanda:9092", "--interval", "1"]
+    restart: unless-stopped
+    networks:
+      - tickets-net
+
+  spark-processing:
+    build: ./spark_processing
+    container_name: spark-processing
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    environment:
+      REDPANDA_BROKERS: "redpanda:9092"
+      TICKETS_TOPIC: "client_tickets"
+      WINDOW_DURATION: "2 minutes"
+      WATERMARK_DURATION: "30 seconds"
+      TRIGGER_INTERVAL: "20 seconds"
+    volumes:
+      - ./data:/app/data
+      - ./checkpoints:/app/checkpoints
+    restart: unless-stopped
+    networks:
+      - tickets-net
+
+networks:
+  tickets-net:
+    driver: bridge
+
+volumes:
+  redpanda-data:
